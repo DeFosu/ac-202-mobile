@@ -409,7 +409,7 @@ hr {
   border: none;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 1208px) {
   .trainer {
     padding-left: 10px;
     padding-right: 10px;
@@ -518,7 +518,7 @@ hr {
           align-items: center;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 965px) {
   .footer {
     padding-left: 10px;
     padding-right: 10px;
@@ -530,6 +530,11 @@ hr {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+  }
+  .footer .footer-col {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 }
 .benefit {
