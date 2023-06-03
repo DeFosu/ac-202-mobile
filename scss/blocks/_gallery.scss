@@ -1,0 +1,28 @@
+
+.gallery{
+    padding-top: 96px;
+    padding-bottom: 257px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card-container{
+        width: 100%;
+        max-width: 1564px;
+        margin-top: 96px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 454px);;
+        column-gap: 101px;
+        row-gap: 66px;
+        justify-content: center;
+
+        .card{
+            border: none;
+            .card-img{
+                max-width: 454px;
+                max-height: 337px;
+                object-fit:contain;
+            }
+        }
+    }
+}

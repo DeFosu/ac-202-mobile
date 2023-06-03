@@ -1,0 +1,17 @@
+{
+    "1":{
+        "name" : "Тренер 444",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas justo a sapien imperdiet congue. Ut quis molestie odio. In non volutpat tortor, vitae interdum est. Nulla mattis urna ligula, et congue leo malesuada quis. Donec eu quam nulla.",
+        "avatar" : "./img/trainer/1.jpg"
+    },
+    "2":{
+        "name" : "Тренер 2",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas justo a sapien imperdiet congue. Ut quis molestie odio. In non volutpat tortor, vitae interdum est. Nulla mattis urna ligula, et congue leo malesuada quis. Donec eu quam nulla.",
+        "avatar" : "./img/trainer/2.jpg"
+    },
+    "3":{
+        "name" : "Тренер 3",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas justo a sapien imperdiet congue. Ut quis molestie odio. In non volutpat tortor, vitae interdum est. Nulla mattis urna ligula, et congue leo malesuada quis. Donec eu quam nulla.",
+        "avatar" : "./img/trainer/3.jpg"
+    }
+}

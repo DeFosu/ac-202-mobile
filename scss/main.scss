@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "blocks/var";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: $bg-color-body;
+}
+
+.container-xxl{
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 0 100px;
+    background-color: $bg-color-main1;
+}
+
+.section-title{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+hr{
+    margin: 0;
+    margin-top: 30px;
+    background-color: black;
+    width: 316px;
+    padding: 0;
+}
+
+
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/gallery";
+@import "blocks/trainer";
+@import "blocks/footer";
+@import "blocks/benefit";

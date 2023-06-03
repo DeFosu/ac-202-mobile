@@ -1,0 +1,77 @@
+
+.trainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 38px;
+    padding-bottom: 165px;
+
+    .subtitle{
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+        margin-top: 37px;
+        max-width: 460px;
+    }
+    .card-container{
+        width: 100%;
+        margin-top: 150px;
+        gap: 227px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        display: flex;
+        width: 100%;
+        border: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1320px;
+        row-gap: 50px;
+        flex-wrap: wrap-reverse;
+
+        .card-body{
+            padding: 0;
+            max-width: 674px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-title{
+            margin: 0;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 49px;
+        }
+
+        .card-text{
+            margin: 0;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: start;
+        }
+
+        .card-img{
+            width: 334px;
+            height: 438px;
+            border-radius: 20px;
+        }
+
+        .btn{
+            box-sizing: border-box;
+            padding: 17px 14px;
+            background-color: $btn-bg-color2;
+            color: $font-color-light;
+            border-radius: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 349px;
+            border: none;
+        }
+    }
+}
