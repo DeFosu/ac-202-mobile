@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
@@ -32,6 +33,15 @@ hr {
   background-color: #393939;
   padding: 8px 100px;
 }
+.navbar .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .navbar .navbar-brand {
   font-weight: 400;
   font-size: 48px;
@@ -46,6 +56,21 @@ hr {
   line-height: 44px;
 }
 
+.navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .header .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 100px;
+    padding-top: 100px;
+  }
+}
 .header {
   background-color: #FFFFFF;
   height: 1202px;
@@ -117,15 +142,37 @@ hr {
   border-radius: 22px;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1070px) {
+  .navbar-desc {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .menu .navbar-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header {
+    padding: 10px;
+  }
   .header .card {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     row-gap: 100px;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 .about {
@@ -202,6 +249,12 @@ hr {
   line-height: 44px;
 }
 
+@media screen and (max-width: 520px) {
+  .about {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .gallery {
   padding-top: 96px;
   padding-bottom: 257px;
@@ -240,6 +293,20 @@ hr {
      object-fit: contain;
 }
 
+@media screen and (max-width: 520px) {
+  .gallery {
+    padding: 10px;
+  }
+  .gallery .card-container .card {
+    border: none;
+    margin: 0 auto;
+  }
+  .gallery .card-container .card .card-img {
+    max-width: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 .trainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,6 +409,21 @@ hr {
   border: none;
 }
 
+@media screen and (max-width: 520px) {
+  .trainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .trainer .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .footer {
   background-color: #3A3A3A;
   display: -webkit-box;
@@ -424,6 +506,19 @@ hr {
           align-items: center;
 }
 
+@media screen and (max-width: 520px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .benefit {
   background-color: #EEEEEE;
   display: -webkit-box;
@@ -502,4 +597,89 @@ hr {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+@media screen and (max-width: 520px) {
+  .benefit {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+      -ms-transform: translate(-50%, 0%) rotate(45deg);
+          transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(-45deg);
+      -ms-transform: translate(-50%, 0%) rotate(-45deg);
+          transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Меню, которое будет появляться */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #3A3A3A;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: 10;
+}
+
+.menu.active {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu li {
+  list-style-type: none;
 }

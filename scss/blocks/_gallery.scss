@@ -26,3 +26,20 @@
         }
     }
 }
+
+@media screen and (max-width : 520px){
+    .gallery{
+        padding:10px;
+        .card-container{
+            .card{
+                border: none;
+                margin: 0 auto;
+                .card-img{
+                    max-width: 400px;
+                    object-fit:contain;
+                }
+            }
+        }
+        
+    }
+}

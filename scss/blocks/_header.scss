@@ -1,7 +1,10 @@
 .navbar{
     background-color: $bg-color-header;
     padding: 8px 100px;
-
+    .navbar-nav{
+        flex-direction: row;
+        align-items: center;
+    }
     .navbar-brand{
         font-weight: 400;
         font-size: 48px;
@@ -16,6 +19,31 @@
         line-height: 44px;
     }
 }
+
+
+
+
+.navbar-mobile{
+    display: none;
+
+}
+
+@media screen and (max-width : 1180px) {
+    .header{
+        .card{
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 100px;
+            padding-top: 100px;
+        }
+    }
+
+
+    
+}
+
+
+
 
 
 .header{
@@ -78,14 +106,33 @@
 }
 
 
-@media screen and (max-width : 1180px) {
-    .header{
-        .card{
-            flex-wrap: wrap;
-            justify-content: center;
-            row-gap: 100px;
-            padding-top: 100px;
+@media screen and (max-width : 1070px){
+    .navbar-desc{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .navbar{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu{
+        .navbar-nav{
+            flex-direction: column;
         }
     }
-    
+
+    .header{
+        padding: 10px;
+        .card{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+    }
 }
