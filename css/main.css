@@ -423,6 +423,18 @@ hr {
         -ms-flex-align: center;
             align-items: center;
   }
+  .trainer .card .card-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .trainer .card .btn {
+    margin-top: 32px;
+  }
 }
 .footer {
   background-color: #3A3A3A;
